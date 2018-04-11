@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 
-const Dashboard = ({title, user, data = {}}) => {
+const Dashboard = ({title, user, data = {}, contest={} }) => {
+    console.log(contest);
 
     const {departure, flight, forecast} = data;
     
@@ -42,6 +43,7 @@ const Dashboard = ({title, user, data = {}}) => {
 };
 
 Dashboard.propTypes = {
+  contest: PropTypes.object,
   user : PropTypes.object,
   data : PropTypes.object,
   title : PropTypes.string

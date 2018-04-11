@@ -1,4 +1,7 @@
 import React, {PropTypes} from 'react';
+import PanelMixed from './Panel';
+import PanelMixed2 from './Panel2';
+import PanelMixed3 from './Panel3';
 
 class App extends React.Component {
     render() {
@@ -6,21 +9,20 @@ class App extends React.Component {
         <div className="container-fluid">
           <div className="container">
             <div className="row">
-              {this.props.panel}
-              {this.props.panel2}
-              {this.props.panel3}
+              <PanelMixed />
+              <PanelMixed2 />
+              <PanelMixed3 />
               <a href="https://github.com/andresmijares/async-redux-saga" target="_new">Check the repo here</a>
             </div>
           </div>
+          {this.props.contest}
         </div>
       );
     }
 }
 
 App.propTypes = {
-  panel: PropTypes.object.isRequired,
-  panel2: PropTypes.object.isRequired,
-  panel3: PropTypes.object.isRequired
+  contest: PropTypes.object.isRequired
 };
 
 export default App;
